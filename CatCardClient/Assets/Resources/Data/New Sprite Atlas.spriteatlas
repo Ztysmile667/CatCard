@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 51075c712da05a54aa7ec4197079c652, type: 3}
+    totalSpriteSurfaceArea: 13595584
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 50f04cb19961e634db75a6335adf14e2, type: 3}
+  - {fileID: 21300000, guid: c38920f132a0be149b67663c862d319c, type: 3}
+  - {fileID: 21300000, guid: 1b1b2a633cdd26148bc2d32936de5e5a, type: 3}
+  - {fileID: 21300000, guid: a3ebdf44552a58c4d8c06af4552c4850, type: 3}
+  - {fileID: 21300000, guid: 57714935e41e82d49aa8d89dca4dfdf0, type: 3}
+  - {fileID: 21300000, guid: 7be64aa5896764e4ea015355503840d8, type: 3}
+  - {fileID: 21300000, guid: c0b24c36bb73da8479dabf9810f68d69, type: 3}
+  - {fileID: 21300000, guid: b794c486896b7cc4ca02a4b48ae4397b, type: 3}
+  - {fileID: 21300000, guid: 71af9f8650926e045aaaab1db5f3ca13, type: 3}
+  - {fileID: 21300000, guid: 5c1eaea738695b146bf9c7452502c2dc, type: 3}
+  - {fileID: 21300000, guid: 217c195b61a0a154fa499daa568a78a3, type: 3}
+  - {fileID: 21300000, guid: ac169c2e7e1367148b83f0e9be5a62b9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - bg3
+  - btn
+  - bg4
+  - bg5
+  - back
+  - bg2
+  - change
+  - bg6
+  - bg1
+  - calender
+  - left
+  - bg7
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

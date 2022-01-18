@@ -1,12 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cat.Message
+namespace Z.Game
 {
 	public class Message : MonoBehaviour
 	{
 		public delegate void MsgDelegate(Msg obj);
 		private static Dictionary<string, MsgDelegate> m_Msg = new Dictionary<string, MsgDelegate>();
+
+		private void Awake()
+		{
+			DontDestroyOnLoad(this.gameObject);
+		}
 
 		/// <summary>
 		/// 添加消息

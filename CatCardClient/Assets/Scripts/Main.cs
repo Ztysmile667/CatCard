@@ -1,31 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Z.Frame;
 
-public class Main : MonoBehaviour
+namespace Z.Game
 {
-	private void Awake()
-	{
-        InitManager();
-
-    }
-
-	// Start is called before the first frame update
-	void Start()
+    public class Main : MonoBehaviour
     {
-        
+        private void Awake()
+        {
+            InitManager();
+
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            ScriptConst.UIM.OpenPanel(new MainPanel(), false, false);
+        }
+
+        public void InitManager()
+        {
+            ScriptConst.MSG = GameObject.Find("Message").GetComponent<Message>();
+            ScriptConst.Game = GameObject.Find("[Game]").GetComponent<GameManager>();
+
+            DataManager.Init();
+
+            ScriptConst.CameraStage = new CameraStage();
+
+            ScriptConst.UIM = new UIManager();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void InitManager()
-	{
-        ScriptConst.CameraStage = new CameraStage();
-
-        ScriptConst.UIM = new UIManager();
-	}
 }

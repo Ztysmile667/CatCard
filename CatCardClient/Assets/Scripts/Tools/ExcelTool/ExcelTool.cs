@@ -21,15 +21,17 @@ public static class ExcelTool
         }
 		else
 		{
-            Debug.LogError("创建表格失败，已存在此文件 " + fileName);
-            return null;
+			if (File.Exists(fileinfo.FullName))
+			{
+                return new ExcelPackage(fileinfo);
+            }
 		}
 
         ExcelPackage excelPackage = new ExcelPackage(fileinfo);
 
         AddSheet(excelPackage, sheetNames);
         excelPackage.Save();
-        Debug.Log("创建Excel成功>>"+ fileinfo.DirectoryName);
+        Debug.Log("创建Excel成功>>"+ fileinfo.FullName);
         return excelPackage;
     }
 
@@ -53,7 +55,7 @@ public static class ExcelTool
             Debug.LogError("Excel文件读取失败。name = "+ fileName);
             return null;
 		}
-        Debug.Log("加载Excel成功>>" + fileName);
+        Debug.Log("加载Excel成功>>" + fileInfo.FullName);
         return excelPackage;
     }
 
@@ -65,7 +67,7 @@ public static class ExcelTool
     /// <param name="row">行数</param>
     /// <param name="col">列数</param>
     /// <param name="value">赋值内容</param>
-    public static void AddData(ExcelPackage package,int sheetIndex,int row,int col,string value)
+    public static void AddData(ExcelPackage package,int row,int col,string value, int sheetIndex = 1)
 	{
         if (package == null)
 		{
@@ -78,6 +80,7 @@ public static class ExcelTool
             Debug.LogError("Excel文件添加数据失败。Sheet索引不对 = " + package.File.Name+",index = "+ sheetIndex);
             return;
         }
+
         var sheet = package.Workbook.Worksheets[sheetIndex];
         sheet.Cells[row, col].Value = value;
         Debug.Log("添加数据成功"+value);
