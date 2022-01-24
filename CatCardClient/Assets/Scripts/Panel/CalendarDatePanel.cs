@@ -76,6 +76,7 @@ namespace Z.Game
 			if(DataManager.calender.ChangeYear(-1))
 			{
 				this.txt_Year.text = DataManager.calender.Year.ToString();
+				this.txt_Month.text = DataManager.calender.Month.ToString();
 				refreshDayList();
 			}
 		}
@@ -85,6 +86,7 @@ namespace Z.Game
 			if (DataManager.calender.ChangeYear(1))
 			{
 				this.txt_Year.text = DataManager.calender.Year.ToString();
+				this.txt_Month.text = DataManager.calender.Month.ToString();
 				refreshDayList();
 			}
 		}

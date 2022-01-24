@@ -52,6 +52,11 @@ namespace Z.Game
                 return false;
 
             this.Year += value;
+
+            //如果等于当前年份，并且月份大于当前最大月份,重置下月份
+            if(this.Year + value >= DateTime.UtcNow.Year && this.Month > DateTime.UtcNow.Month)
+                this.Month = DateTime.UtcNow.Month;
+
             this.RefreshMaxDayCount();
             //发送消息通知别人改变了
 
@@ -63,10 +68,10 @@ namespace Z.Game
         /// </summary>
         public bool ChangeMonth(int value)
         {
-            if (this.Month + value < 1 || this.Month > 12)
+            if (this.Month + value < 1 || this.Month + value > 12)
                 return false;
 
-            if (this.Month + value > DateTime.UtcNow.Month)
+            if (this.Month + value > DateTime.UtcNow.Month && this.Year == DateTime.UtcNow.Year)
                 return false;
 
             this.Month += value;
